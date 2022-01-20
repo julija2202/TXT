@@ -1,0 +1,102 @@
+ 1. Создать внешний репозиторий c названием TXT.
+    *click "new"
+    *enter repository name "TXT"
+    *click "create repository"
+
+ 2. Клонировать репозиторий TXT на локальный компьютер.
+     *git clone https://github.com/julija2202/TXT.git
+
+ 3. Внутри локального TXT создать файл “new.txt”.
+     *cd TXT
+     *touch new.txt
+
+ 4. Добавить файл под гит.
+     *git add new.txt
+
+ 5. Закоммитить файл.
+     *git commit -m "add new file"
+
+ 6. Отправить файл на внешний GitHub репозиторий.
+     *git push
+
+ 7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT.
+     *vim new.txt
+     *i
+     *enter:     ФИО - Яголович Юлия Валерьевна
+                 Возраст - 34
+                 Количество домашних животных - 1
+                 Будущая желаемая зарплата - 450$
+     *esc
+     *:wq
+
+ 8. Отправить изменения на внешний репозиторий.
+     *git add new.txt
+     *git commit -m "edit new.txt"
+     *git push
+
+ 9. Создать файл preferences.txt
+     *cat > preferances.txt
+     *ctrl+c
+
+ 10. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT.
+      *vim new.txt
+      *i
+      *enter:   Любимый фильм - 1000 слов
+                Любимый сериал - Отчаянные домохозяйки
+                Любимая еда - драники
+                Любимое время года - лето
+                Страна, которую хому посетить - Америка
+      *esc
+      :wq
+
+ 11. Создать файл sklls.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT
+      *vim new.txt
+      *i
+      *enter:  Клиент-серверная архитектура - POSTMAN
+               Мобильное тестирование - Android studio
+               Терминал - Git bash
+               Система управления версиями - Git
+               База данных - SQL
+               Сниффинг трафика - Charles, Fiddler
+      *esc
+      :wq
+
+ 12. Сделать коммит в одну строку.
+      *git add skills.txt preferances.txt
+      *git commit -m "add 2 files"
+  
+ 13. Отправить сразу 2 файла на внешний репозиторий.
+      *git push
+ 
+ 14. На веб интерфейсе создать файл bug_report.txt.
+      *add file
+      *create new file
+
+ 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+      *enter file name "bug_report"
+
+ 16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.
+     *click file "bug_report"
+     *click "edit this file"
+     *enter     
+             id - 1
+             summary - В поле "Where to search" не вводится более 10 символов
+             description - В поле "Where to search" нет возможности ввести путь файла, который состоит из более 10 символов
+             expected_result - В поле "Where to search" указываем начальный каталог или набор каталогов FS на неограниченную глубину вложенности
+             actual_result - В поле "Where to search" не можем указать начальный каталог или набор каталогов FS на неограниченную глубину вложенности
+             requirements - 3пункт
+             steps_to_reproduce - 1.Запустить приложение 
+                                  2.В поле "Where to search" ввести путь файла, состоящий из более 10 символов
+             symptom - Missing feature
+             severity - critical
+             priority - ASAP
+             attachments - --
+
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+      *enter in  "add an optional extended description" - "edit bug_report"
+      *click "commit changes"
+
+ 18. Синхронизировать внешний и локальный репозиторий TXT
+      *cd TXT
+      *git fetch
+      *git pull
